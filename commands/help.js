@@ -1,4 +1,4 @@
-const { prefix } = require('../config.json');
+const { prefix } = process.env.BOT_PREFIX;
 
 module.exports = {
     name: 'help',
