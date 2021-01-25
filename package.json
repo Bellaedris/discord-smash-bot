@@ -1,0 +1,16 @@
+{
+  "name": "discord-smash-bot",
+  "version": "0.0.1",
+  "description": "Discord bot that rules an unending tournament",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arthur Pradier",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
+  }
+}
