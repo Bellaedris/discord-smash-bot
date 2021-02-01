@@ -9,6 +9,6 @@ Discord bot that manages an unending Smash tournament.
     "url": "mysql://login:password@DBAdress/DBname",
     "createDbOnConnect": true
   }
-- rename .env.example to .env and fill it with the appropriate data (discord bot token and desired prefix)
+- rename .env.example to .env and fill it with the appropriate data (discord bot token, desired prefix and base MMR)
 - migrate the database: east migrate
 - run the project using node app.js
