@@ -3,11 +3,23 @@
  */
 
 const fs = require('fs');
-require('dotenv').config()
-const Discord = require('discord.js')
+const mysql = require("mysql");
+require('dotenv').config();
+const Discord = require('discord.js');
 const prefix = process.env.BOT_PREFIX;
 
-console.log(prefix);
+//connect to DB
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "smashbot"
+  });
+  
+db.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
 
 const client = new Discord.Client();
 const cooldowns = new Discord.Collection();
@@ -76,7 +88,7 @@ client.on('message', message => {
     }
 
     try {
-        command.execute(message, args); //execute the named command
+        command.execute(message, args, db); //execute the named command
     } catch (e) {
         console.error(e);
         message.reply('An error occured while trying to execute the command.');
