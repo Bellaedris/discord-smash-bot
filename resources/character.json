@@ -1,0 +1,326 @@
+[
+	{
+		"name": "Banjo & Kazooie",
+		"aliases": "B&K, Banjo, BaK"
+	},
+	{
+		"name": "Bayonetta",
+		"aliases": "Bayo, bayoneta, bayonnetta, bayonneta"
+	},
+	{
+		"name": "Bowser",
+		"aliases":
+	},
+	{
+		"name": "Bowser Jr.",
+		"aliases": "bjr, bj, bowser jr"
+	},
+	{
+		"name": "Byleth",
+		"aliases":
+	},
+	{
+		"name": "Captain Falcon",
+		"aliases": "falcon, captain, cpt falcon"
+	},
+	{
+		"name": "Chrom",
+		"aliases":
+	},
+	{
+		"name": "Cloud",
+		"aliases":
+	},
+	{
+		"name": "Corrin",
+		"aliases":
+	},
+	{
+		"name": "Daisy",
+		"aliases":
+	},
+	{
+		"name": "Pit Maléfique",
+		"aliases": "DP, Dark pit, PM"
+	},
+	{
+		"name": "Samus Sombre",
+		"aliases": "DArk samus, SS, DS"
+	},
+	{
+		"name": "Diddy Kong",
+		"aliases": "Diddy"
+	},
+	{
+		"name": "Donkey Kong",
+		"aliases": "dong, DK"
+	},
+	{
+		"name": "Dr. Mario",
+		"aliases": "DM, Dr Mario"
+	},
+	{
+		"name": "Duck Hunt",
+		"aliases": "DH, Duckhunt"
+	},
+	{
+		"name": "Falco",
+		"aliases":
+	},
+	{
+		"name": "Fox",
+		"aliases":
+	},
+	{
+		"name": "Ganondorf",
+		"aliases": "Ganon, doriyah"
+	},
+	{
+		"name": "Amphinobi",
+		"aliases": "amphi, greninja, gren, amphino"
+	},
+	{
+		"name": "Hero",
+		"aliases":
+	},
+	{
+		"name": "Ice Climbers",
+		"aliases": "IC, ice"
+	},
+	{
+		"name": "Ike",
+		"aliases":
+	},
+	{
+		"name": "Felinferno",
+		"aliases": "felin, chat, incineroar, incine"
+	},
+	{
+		"name": "Inkling",
+		"aliases": "ink, squid, splatoon"
+	},
+	{
+		"name": "Rondoudou",
+		"aliases": "rondou, jiggly, puff, jigglypuff"
+	},
+	{
+		"name": "Joker",
+		"aliases":
+	},
+	{
+		"name": "Ken",
+		"aliases":
+	},
+	{
+		"name": "Roi Dadidou",
+		"aliases": "RD, DDD, King Dedede, KDDD"
+	},
+	{
+		"name": "King K. Rool",
+		"aliases": "Krool, K Rool, croco"
+	},
+	{
+		"name": "Kirby",
+		"aliases":
+	},
+	{
+		"name": "Link",
+		"aliases":
+	},
+	{
+		"name": "Little Mac",
+		"aliases": "LM"
+	},
+	{
+		"name": "Lucario",
+		"aliases":
+	},
+	{
+		"name": "Lucas",
+		"aliases":
+	},
+	{
+		"name": "Lucina",
+		"aliases":
+	},
+	{
+		"name": "Luigi",
+		"aliases":
+	},
+	{
+		"name": "Marie",
+		"aliases": "isabelle, isa"
+	},
+	{
+		"name": "Mario",
+		"aliases":
+	},
+	{
+		"name": "Marth",
+		"aliases":
+	},
+	{
+		"name": "Megaman",
+		"aliases": "mega, mm"
+	},
+	{
+		"name": "Meta Knight",
+		"aliases": "MK"
+	},
+	{
+		"name": "Mii Combattant",
+		"aliases": "Mii brawler, brawler"
+	},
+	{
+		"name": "Mii épeiste",
+		"aliases": "mii swordfighter, swordfighter"
+	},
+	{
+		"name": "Mii Tireur",
+		"aliases": "Mii gunner, gunner"
+	},
+	{
+		"name": "Min Min",
+		"aliases": "min, minmin"
+	},
+	{
+		"name": "Mr. Game & Watch",
+		"aliases": "g&w, game & watch, mr game & watch, mr game&watch"
+	},
+	{
+		"name": "Ness",
+		"aliases":
+	},
+	{
+		"name": "Olimar",
+		"aliases":
+	},
+	{
+		"name": "Pac man",
+		"aliases": "Pacman, PM"
+	},
+	{
+		"name": "Palutena",
+		"aliases": "Palu"
+	},
+	{
+		"name": "Peach",
+		"aliases": 
+	},
+	{
+		"name": "Pichu",
+		"aliases":
+	},
+	{
+		"name": "Pikachu",
+		"aliases": "pika"
+	},
+	{
+		"name": "Plante Piranha",
+		"aliases": "PP, plante pirhana, pirhana plant, plant pirhanna"
+	},
+	{
+		"name": "Pit",
+		"aliases":
+	},
+	{
+		"name": "Ridley",
+		"aliases":
+	},
+	{
+		"name": "Rob",
+		"aliases":
+	},
+	{
+		"name": "Daraen",
+		"aliases": "robin"
+	},
+	{
+		"name": "Rosalina",
+		"aliases": "Rosalina and luma, rosalina & luma, rosa"
+	},
+	{
+		"name": "Roy",
+		"aliases":
+	},
+	{
+		"name": "Ryu",
+		"aliases":
+	},
+	{
+		"name": "Samus",
+		"aliases":
+	},
+	{
+		"name": "Sephiroth",
+		"aliases": "sephi, sephirot"
+	},
+	{
+		"name": "Sheik",
+		"aliases": "shiek"
+	},
+	{
+		"name": "Shulk",
+		"aliases":
+	},
+	{
+		"name": "Simon",
+		"aliases":
+	},
+	{
+		"name": "Snake",
+		"aliases":
+	},
+	{
+		"name": "Sonic",
+		"aliases":
+	},
+	{
+		"name": "Steve",
+		"aliases":
+	},
+	{
+		"name": "Terry",
+		"aliases":
+	},
+	{
+		"name": "Link cartoon",
+		"aliases": "tink, toon link, LC, tl"
+	},
+	{
+		"name": "Villageois",
+		"aliases": "Villageoise, villager"
+	},
+	{
+		"name": "Link enfant",
+		"aliases": "LE, YL, Young link, yink"
+	},
+	{
+		"name": "Wario",
+		"aliases": "tink, toon link, LC, tl"
+	},
+	{
+		"name": "Entraîneuse wii-fit",
+		"aliases": "Entraineuse wiifit,Entraineuse wii-fit, Entraîneuse wiifit, wiifit, wii-fit, wii-fit trainer,wiifit trainer, entraineur wiifit, entraineur wii-fit, entraîneur wii-fit, entraîneur wiiit"
+	},
+	{
+		"name": "Dresseur de pokémon",
+		"aliases": "Pokémon trainer, Trainer, dresseur, PT"
+	},
+	{
+		"name": "Wolf",
+		"aliases": ""
+	},
+	{
+		"name": "Yoshi",
+		"aliases": ""
+	},
+	{
+		"name": "Zelda",
+		"aliases": ""
+	},
+	{
+		"name": "Samus sans armure",
+		"aliases": "zss, ssa, zero suit samus, "
+	},
+]
