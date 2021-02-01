@@ -29,9 +29,11 @@ exports.migrate = function (client, done) {
 
 exports.rollback = function (client, done) {
     var db = client.db;
-    var sql = "drop table users;" + "drop table games;" 
-    db.query(sql, function(err, result) {
-        if(err) throw err;
+    var sql = ["drop table users;", "drop table games;"]
+    sql.forEach(query => {
+        db.query(query, function(err, result) {
+            if(err) throw err;
+        });
     });
     done();
 };
