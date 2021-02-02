@@ -4,6 +4,7 @@ exports.migrate = function (client, done) {
     var db = client.db;
     var sql = ["create table if not exists users(" +
             "discordId varchar(100) primary key, " +
+            "discordTag varchar(100),"+
             "rating int(5)," +
             "previous_rating int(5)," +
             "created_at timestamp not null," + 

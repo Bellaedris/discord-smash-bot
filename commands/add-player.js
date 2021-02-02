@@ -3,8 +3,6 @@ const { prefix } = process.env.BOT_PREFIX;
 module.exports = {
     name: 'add-player',
     description: 'Register to the bot!',
-    args: false,
-    usage: '<@user>',
     guildOnly: true,
     cooldown: 2,
     aliases: ['r', 'inscription', 'i'],
@@ -19,7 +17,7 @@ module.exports = {
         var sql = "Select count(discordId) as count from users where discordId ='"+message.author.id+"';";
         db.query(sql, function(err, result) {
             if(err) throw err;
-            let results=JSON.parse(JSON.stringify(result))
+            let results=JSON.parse(JSON.stringify(result));
             if (results[0].count == 1) 
             {
                 return message.channel.send("You're already registered.");
@@ -28,7 +26,8 @@ module.exports = {
 
 
              var sql = "insert into users values('" +
-             message.author.id + "'," +
+             message.author.id + "','" +
+             message.author.tag+"',"+
              1000 + "," +
              1000 + "," +
              "NOW()," +

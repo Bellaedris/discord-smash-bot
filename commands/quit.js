@@ -3,8 +3,6 @@ const { prefix } = process.env.BOT_PREFIX;
 module.exports = {
     name: 'quit',
     description: 'Leave the ranking!',
-    args: false,
-    usage: '<@user>',
     guildOnly: true,
     cooldown: 2,
     aliases: ['q', 'leave', 'i'],
