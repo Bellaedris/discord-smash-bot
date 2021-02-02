@@ -1,7 +1,5 @@
 const { prefix } = process.env.BOT_PREFIX;
 const Discord = require('discord.js');
-const client = new Discord.Client();
-client.login('ODAzMzY5OTY4NzMzMTI2NzI2.YA8ylg.83e0dSCuoAKmqbO7NGtmkOzUeNY');
 module.exports = {
     name: 'leaderboard',
     description: 'Show the leaderboard!',
