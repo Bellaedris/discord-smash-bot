@@ -1,4 +1,5 @@
 const { prefix } = process.env.BOT_PREFIX;
+const { token }= process.env.DISCORD_BOT_TOKEN;
 const Discord = require('discord.js');
 module.exports = {
     name: 'leaderboard',
