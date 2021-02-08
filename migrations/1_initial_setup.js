@@ -11,13 +11,19 @@ exports.migrate = function (client, done) {
             "updated_at timestamp not null);",
 
             "create table if not exists games(" +
-            "id int(6) unsigned auto_increment primary key, " +
+            "id_game int(6) unsigned auto_increment primary key, " +
             "player_one_id varchar(100) NOT NULL," + 
             "player_two_id varchar(100) NOT NULL," +
             "winner_id varchar(100)," + 
             "P1_char varchar(30) NOT NULL," +
             "P2_char varchar(30) NOT NULL," +
-            "stage varchar(30) NOT NULL);"]
+            "stage varchar(30) NOT NULL);",
+
+            "create table if not exists season("+
+            "id_season int(6) auto_increment primary key,"+
+            "start_season DATE,"+
+            "end_season DATE,"+
+            "duration varchar(15));"]
 
     sql.forEach(query => {
         db.query(query, function(err, result) {
