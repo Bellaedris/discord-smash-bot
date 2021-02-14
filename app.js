@@ -3,7 +3,7 @@
  */
 
 const fs = require('fs');
-const mysql = require("mysql");
+const mysql = require("mysql2");
 require('dotenv').config();
 const Discord = require('discord.js');
 const prefix = process.env.BOT_PREFIX;

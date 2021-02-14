@@ -12,6 +12,8 @@
   "dependencies": {
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
+    "east": "^2.0.1",
+    "east-mysql": "^0.3.0",
     "elo-rating": "^1.0.1",
     "mysql2": "^2.2.5"
   }
