@@ -1,36 +1,24 @@
 const { prefix } = process.env.BOT_PREFIX;
 
-module.exports = {
+module.exports = 
+{
     name: 'time-left',
     description: 'Time left before the end of the season!',
     cooldown: 2,
     aliases: ['tl', 'time', 'timeleft'],
-    execute(message, args, db) {
+    execute(message, args, db) 
+    {
         const data = [];
-           
-        var sql = "Select count(discordId) as count from users where discordId ='"+message.author.id+"';";
-        db.query(sql, function(err, result) {
-            if(err) throw err;
-            let results=JSON.parse(JSON.stringify(result));
-            if (results[0].count == 1)  
-            {
-             var sql = "Select min(created_at) as first from users";
+        const filter = m => m.content.includes('discord');
+        const collector = message.channel.createMessageCollector(filter, { time: 15000 });
 
-             db.query(sql, function(err, result) {
-                if(err) throw err;
-                else
-                {
-                    let results=JSON.parse(JSON.stringify(result));
-                    return message.channel.send("Temps restant: "+results[0].first);
-                }
-            });
-         }
+        collector.on('collect', m => {
+            console.log(`Collected ${m.content}`);
+        });
 
-         
-     });
-
-        
-
-        
+        collector.on('end', collected => {
+            return console.log("time's up");
+            
+        });
     },
 };

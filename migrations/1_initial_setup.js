@@ -23,7 +23,7 @@ exports.migrate = function (client, done) {
             "id_season int(6) auto_increment primary key,"+
             "start_season DATE,"+
             "end_season DATE,"+
-            "duration varchar(15));"]
+            "flagSeason bit not null default 0);"]
 
     sql.forEach(query => {
         db.query(query, function(err, result) {
