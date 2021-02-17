@@ -22,8 +22,7 @@ exports.migrate = function (client, done) {
             "create table if not exists season("+
             "id_season int(6) auto_increment primary key,"+
             "start_season DATE,"+
-            "end_season DATE,"+
-            "flagSeason bit not null default 0);"]
+            "end_season DATE);"]
 
     sql.forEach(query => {
         db.query(query, function(err, result) {
@@ -36,7 +35,7 @@ exports.migrate = function (client, done) {
 
 exports.rollback = function (client, done) {
     var db = client.db;
-    var sql = "drop table if exists users, games;" 
+    var sql = "drop table if exists users, games, season;" 
     db.query(sql, function(err, result) {
         if(err) throw err;
     });
