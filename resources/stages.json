@@ -1,3 +1,47 @@
 [
-    
+    {
+        "name": "Battlefield",
+        "emoji": "battlefield",
+        "id": "807317815556046898"
+    },
+    {
+        "name": "Small Battlefield",
+        "emoji": "small_battlefield",
+        "id": "807317826586279996"
+    },
+    {
+        "name": "Final Destination",
+        "emoji": "final_destination",
+        "id": "807318402011627670"
+    },
+    {
+        "name": "Yoshi's Story",
+        "emoji": "yoshis_story",
+        "id": "807319252410957875"
+    },
+    {
+        "name": "Lylat",
+        "emoji": "lylat",
+        "id": "807320912541122591"
+    },
+    {
+        "name": "Pokemon Stadium 2",
+        "emoji": "pokemon_stadium",
+        "id": "807320922364837919"
+    },
+    {
+        "name": "Smashville",
+        "emoji": "smashville",
+        "id": "807320935295221770"
+    },
+    {
+        "name": "Kalos",
+        "emoji": "kalos",
+        "id": "807320903120846889"
+    },
+    {
+        "name": "Town and City",
+        "emoji": "town_and_city",
+        "id": "807320943084306453"
+    }
 ]
