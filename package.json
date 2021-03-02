@@ -10,6 +10,7 @@
   "author": "Arthur Pradier",
   "license": "ISC",
   "dependencies": {
+    "canvas": "^2.7.0",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
     "east": "^2.0.1",
