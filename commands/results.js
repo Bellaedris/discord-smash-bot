@@ -51,8 +51,8 @@ module.exports = {
                     }
                     if (ret) {
                         //if the user input is correct, pick the character
-                        winner = reaction.emoji.name == 'one' ? playerTags[0] : playerTags[1];
-                        looser = reaction.emoji.name == 'one' ? playerTags[1] : playerTags[0];
+                        winner = reaction.emoji.name == '1️⃣' ? playerTags[0] : playerTags[1];
+                        looser = reaction.emoji.name == '2️⃣' ? playerTags[1] : playerTags[0];
                         collector.stop();
                     }
                 });

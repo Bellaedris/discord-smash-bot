@@ -1,10 +1,338 @@
 [
     {
         "name": "Mario",
-        "aliases": ""
+        "aliases": "Mario"
+    },
+    {
+        "name": "Donkey Kong",
+        "aliases": "Donkey Kong,DK,Dong"
+    },
+    {
+        "name": "Link",
+        "aliases": "Link"
+    },
+    {
+        "name": "Samus",
+        "aliases": "Samus"
+    },
+    {
+        "name": "Dark Samus",
+        "aliases": "Dark Samus,Samus sombre,Damus"
+    },
+    {
+        "name": "Yoshi",
+        "aliases": "Yoshi"
+    },
+    {
+        "name": "Kirby",
+        "aliases": "Kirby,Kirb"
+    },
+    {
+        "name": "Fox",
+        "aliases": "Fox"
+    },
+    {
+        "name": "Pikachu",
+        "aliases": "Pikachu,pika"
+    },
+    {
+        "name": "Luigi",
+        "aliases": "Luigi"
+    },
+    {
+        "name": "Ness",
+        "aliases": "Ness"
+    },
+    {
+        "name": "Captain Falcon",
+        "aliases": "Captain Falcon,Cap,CF,Falcon"
+    },
+    {
+        "name": "Rondoudou",
+        "aliases": "Rondoudou,Jiggly,Puff,Jiggs"
+    },
+    {
+        "name": "Peach",
+        "aliases": "Peach"
+    },
+    {
+        "name": "Daisy",
+        "aliases": "Daisy"
+    },
+    {
+        "name": "Bowser",
+        "aliases": "Bowser"
+    },
+    {
+        "name": "Ice Climbers",
+        "aliases": "IC,ICs,Icies,Climbers"
+    },
+    {
+        "name": "Sheik",
+        "aliases": "Sheik"
+    },
+    {
+        "name": "Zelda",
+        "aliases": "Zelda"
+    },
+    {
+        "name": "Dr Mario",
+        "aliases": "Dr Mario,Doc"
+    },
+    {
+        "name": "Pichu",
+        "aliases": "Pichu"
+    },
+    {
+        "name": "Falco",
+        "aliases": "Falco"
+    },
+    {
+        "name": "Marth",
+        "aliases": "Marth"
+    },
+    {
+        "name": "Lucina",
+        "aliases": "Lucina"
+    },
+    {
+        "name": "Young Link",
+        "aliases": "YL,Yink,Link enfant"
+    },
+    {
+        "name": "Ganondorf",
+        "aliases": "Ganondorf,Ganon"
+    },
+    {
+        "name": "Mewtwo",
+        "aliases": "Mewtwo,M2"
+    },
+    {
+        "name": "Roy",
+        "aliases": "Roy"
+    },
+    {
+        "name": "Chrom",
+        "aliases": "Chrom"
+    },
+    {
+        "name": "Mr Game and Watch",
+        "aliases": "GW,GaW,G&W,GnW"
+    },
+    {
+        "name": "Meta Knight",
+        "aliases": "Meta Knight,MK"
+    },
+    {
+        "name": "Pit",
+        "aliases": "Pit"
+    },
+    {
+        "name": "Dark Pit",
+        "aliases": "Dark Pit, Pit Maléfique, DPit"
     },
     {
         "name": "Samus sans armure",
-        "aliases": "ZSS, Zero Suit Samus, SSA"
+        "aliases": "ZSS,Zero Suit Samus,SSA"
+    },
+    {
+        "name": "Wario",
+        "aliases": "Wario"
+    },
+    {
+        "name": "Snake",
+        "aliases": "Snake"
+    },
+    {
+        "name": "Ike",
+        "aliases": "Ike"
+    },
+    {
+        "name": "Pokemon Trainer",
+        "aliases": "Pokemon Trainer,PT,Pokemon,Trainer"
+    },
+    {
+        "name": "Diddy Kong",
+        "aliases": "Diddy Kong,Diddy,DDK"
+    },
+    {
+        "name": "Lucas",
+        "aliases": "Lucas"
+    },
+    {
+        "name": "Sonic",
+        "aliases": "Sonic"
+    },
+    {
+        "name": "King Dedede",
+        "aliases": "King Dedede,DDD,Roi Dadidou,Dadidou,D3"
+    },
+    {
+        "name": "Olimar",
+        "aliases": "Olimar"
+    },
+    {
+        "name": "Lucario",
+        "aliases": "Lucario"
+    },
+    {
+        "name": "ROB",
+        "aliases": "ROB,R.O.B,R.O.B."
+    },
+    {
+        "name": "Toon Link",
+        "aliases": "Toon Link,Tink,Link Cartoon"
+    },
+    {
+        "name": "Wolf",
+        "aliases": "Wolf"
+    },
+    {
+        "name": "Villager",
+        "aliases": "Villager,Villageois, Villageoise,Villy"
+    },
+    {
+        "name": "Mega Man",
+        "aliases": "Mega Man"
+    },
+    {
+        "name": "Wii Fit Trainer",
+        "aliases": "Wii Fit Trainer, Wii Fit,WFT"
+    },
+    {
+        "name": "Rosalina & Luma",
+        "aliases": "Rosalina & Luma,Rosaluma,Rosa,Harmonie,Harmonie et Luma"
+    },
+    {
+        "name": "Little Mac",
+        "aliases": "Little Mac,Petit Mac,Mac"
+    },
+    {
+        "name": "Greninja",
+        "aliases": "Greninja,Amphinobi,Amphi"
+    },
+    {
+        "name": "Mii Brawler",
+        "aliases": "Mii Brawler,Brawler"
+    },
+    {
+        "name": "Mii Gunner",
+        "aliases": "Mii Gunner,Gunner"
+    },
+    {
+        "name": "Mii Swordfighter",
+        "aliases": "Mii Swordfighter,Sword,Swordie,Swordfighter"
+    },
+    {
+        "name": "Palutena",
+        "aliases": "Palutena,Palu"
+    },
+    {
+        "name": "Pac Man",
+        "aliases": "Pac Man,pacman"
+    },
+    {
+        "name": "Robin/Daraen",
+        "aliases": "Robin,Daraen"
+    },
+    {
+        "name": "Shulk",
+        "aliases": "Shulk"
+    },
+    {
+        "name": "Bowser Jr",
+        "aliases": "Bowser Jr,Jr,BJ"
+    },
+    {
+        "name": "Duo Duck Hunt",
+        "aliases": "DH,DHD,DDH"
+    },
+    {
+        "name": "Ryu",
+        "aliases": "Ryu"
+    },
+    {
+        "name": "Ken",
+        "aliases": "Ken"
+    },
+    {
+        "name": "Cloud",
+        "aliases": "Cloud"
+    },
+    {
+        "name": "Corrin",
+        "aliases": "Corrin"
+    },
+    {
+        "name": "Bayonetta",
+        "aliases": "Bayonetta,Bayo"
+    },
+    {
+        "name": "Inkling",
+        "aliases": "Inkling,ink,"
+    },
+    {
+        "name": "Ridley",
+        "aliases": "Ridley"
+    },
+    {
+        "name": "Simon",
+        "aliases": "Simon"
+    },
+    {
+        "name": "Richter",
+        "aliases": "Richter"
+    },
+    {
+        "name": "King K Rool",
+        "aliases": "King K Rool,krool,k rool,KKR"
+    },
+    {
+        "name": "Isabelle/Marie",
+        "aliases": "Isabelle,Marie"
+    },
+    {
+        "name": "Incineroar/Felinferno",
+        "aliases": "Incineroar,Felinferno,Feli"
+    },
+    {
+        "name": "Plante Piranha",
+        "aliases": "Plante Piranha,Piranha,plant,PP"
+    },
+    {
+        "name": "Joker",
+        "aliases": "Joker"
+    },
+    {
+        "name": "Hero",
+        "aliases": "Hero,Heros,Héros,Herault"
+    },
+    {
+        "name": "Banjo&Kazooie",
+        "aliases": "Banjo&Kazooie,Banjo et Kazooie,Banjo & KazooieBK,Banjo,Kazooie"
+    },
+    {
+        "name": "Terry",
+        "aliases": "Terry"
+    },
+    {
+        "name": "Byleth",
+        "aliases": "Byleth"
+    },
+    {
+        "name": "Min Min",
+        "aliases": "Min Min,Min-Min"
+    },
+    {
+        "name": "Steve",
+        "aliases": "Steve,Alex,Enderman,Zombie"
+    },
+    {
+        "name": "Sephiroth",
+        "aliases": "Sephiroth, Sephi,Seph"
+    },
+    {
+        "name": "Pyra/Mythra",
+        "aliases": "Pyra&Mythra,Pyra,Mythra,Pyra et Mythra,Pyra & Mythra,Pyra/Mythra"
     }
 ]
