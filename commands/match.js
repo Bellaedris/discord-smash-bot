@@ -8,18 +8,18 @@ module.exports = {
     args: true,
     usage: '<@user> <@user>',
     guildOnly: true,
-    cooldown: 2,
+    cooldown: 120,
     aliases: ['m', 'f'],
 	execute(message, args, db) {
         const data = [];
         
         if (args.length > 2) {
-            return message.channel.send("The correct usage is !match @<P1> @<P2>");
+            return message.channel.send("Une utilisation correcte est !match @<P1> @<P2>");
         }
 
-        /*if (args[0] == args[1]) {
-            return message.channel.send("You cannot fight yourself.")
-        }*/
+        if (args[0] == args[1]) {
+            return message.channel.send("Il est impossible de s'affronter soi-même.")
+        }
 
         let playerTags = new Array();
         //check both players are subscribed
@@ -28,14 +28,14 @@ module.exports = {
             playerTags.push(playerTag);
             db.execute("SELECT * FROM users WHERE discordId = ?", [playerTag], function (err, result, fields) {
                 if (!result.length)
-                    return message.channel.send("<@" + playerTag + "> must register to the bot first!");
+                    return message.channel.send("<@" + playerTag + "> n'es pas inscrit!");
                 if (err) throw err;
             });
         })
 
         //pick characters with validation for each pick
         let picks = new Array();
-        message.channel.send(args[0] + ", pick your character.")
+        message.channel.send(args[0] + ", entre ton combattant.")
         const filter = m => m.author.id === playerTags[0] 
         //boucler le collector tant que l'on ne trouve pas de personnage valide?
         const collector = message.channel.createMessageCollector(filter, {time: 60000});
@@ -54,13 +54,13 @@ module.exports = {
                 
                 collector.stop();
             } else {
-                message.channel.send("Please type a valid character.")
+                message.channel.send("Il faut entrer un nom de personnage valide.")
             }
         });
 
         collector.on('end', collected => {
             //second player pick
-            message.channel.send(args[1] + ", pick your character.")
+            message.channel.send(args[1] + ", entre ton combattant.")
             const filter = m => m.author.id === playerTags[1] 
             //boucler le collector tant que l'on ne trouve pas de personnage valide?
             const collector = message.channel.createMessageCollector(filter, {time: 60000});
@@ -77,19 +77,15 @@ module.exports = {
                     //if the user input is correct, pick the character
                     collector.stop();
                 } else {
-                    message.channel.send("Please type a valid character.")
+                    message.channel.send("Il faut entrer un nom de personnage valide.")
                 }
             });
 
             collector.on('end', collected => {
-                picks.forEach(pick => {
-                    console.log(pick + " ");
-                });
-
                 //pick stage (reaction)
                 PlayerToPick = Math.floor(Math.random()); // either 0 or 1
                 selectedStage = ''
-                message.channel.send(args[PlayerToPick] + ", pick the stage.").then(msg => {
+                message.channel.send(args[PlayerToPick] + ", sélectionne un stage.").then(msg => {
 
                     stages.forEach(stage => {
                         msg.react(stage.id);
@@ -133,7 +129,7 @@ module.exports = {
                         });
 
                         //await for a reaction to know the winner
-                        message.channel.send("ongoing match, react to declare the winner");
+                        message.channel.send("Match en cours. Pour déclarer les résultats, utilisez la commande s!res");
                     });
                 });
             
