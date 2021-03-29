@@ -37,8 +37,6 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
   }
 
 }
-
-
 module.exports = {
   name: 'leaderboard',
   description: 'Show the leaderboard!',
@@ -70,18 +68,20 @@ module.exports = {
         const ctx = canvas.getContext('2d');
         loadImage('./resources/images/background.jpg').then((bg) =>
         {
-          ctx.drawImage(bg, 50, 0,canvas.width, canvas.height);
+          ctx.drawImage(bg, 50, 2,canvas.width, canvas.height);
 
-          ctx.fillStyle = '#0B132B';
-          ctx.strokeStyle="#5BC0BE";
-          roundRect(ctx, 50, 0, canvas.width-50, 100, {
+          ctx.fillStyle = '#1C2541';
+          ctx.strokeStyle="#1F367A";
+          ctx.lineWidth = 5;
+          roundRect(ctx, 50, 0, canvas.width-55, 100, {
             bl: 50,
             br: 50
           }, true);
 
           ctx.font = '60px poppins';
           ctx.fillStyle = '#ffffff';
-          ctx.fillText('Leaderboard',300, 75);
+          ctx.textAlign='center';
+          ctx.fillText('Leaderboard',canvas.width/2, 75);
 
           let j=0;
           let k=1;
@@ -95,20 +95,24 @@ module.exports = {
               if (i===0 )
               {
                 ctx.strokeStyle = "#d4ae15";
+                ctx.lineWidth = 2;
 
               }
               else if (i === 1   )
               {
                 ctx.strokeStyle = "#949494";
+                ctx.lineWidth = 2;
               }
               else if (i === 2)
               {
                 ctx.strokeStyle = "#9e5a00";
+                ctx.lineWidth = 2;
               }
 
               else
               {
                 ctx.strokeStyle = "#000";
+                ctx.lineWidth = 1;
               }
 
               ctx.fillStyle = "rgba(58, 80, 107, 0.5)";
@@ -118,6 +122,7 @@ module.exports = {
                 br: 25
               }, true);
 
+              ctx.textAlign='start';
               ctx.font = '30px poppins';
               ctx.fillStyle = '#ffffff';
               ctx.fillText("#"+k+" -", 275, 200+j);
