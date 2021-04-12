@@ -13,6 +13,10 @@ module.exports = {
 	execute(message, args, db) {
         const data = [];
         
+        if (args.length < 2) {
+            return message.channel.send("Une utilisation correcte est !match @<P1> @<P2>");
+        }
+
         if (args.length > 2) {
             return message.channel.send("Une utilisation correcte est !match @<P1> @<P2>");
         }
@@ -30,111 +34,112 @@ module.exports = {
                 if (!result.length)
                     return message.channel.send("<@" + playerTag + "> n'es pas inscrit!");
                 if (err) throw err;
-            });
-        })
 
-        //pick characters with validation for each pick
-        let picks = new Array();
-        message.channel.send(args[0] + ", entre ton combattant.")
-        const filter = m => m.author.id === playerTags[0] 
-        //boucler le collector tant que l'on ne trouve pas de personnage valide?
-        const collector = message.channel.createMessageCollector(filter, {time: 60000});
+                //pick characters with validation for each pick
+                let picks = new Array();
+                message.channel.send(args[0] + ", entre ton combattant.")
+                const filter = m => m.author.id === playerTags[0] 
+                //boucler le collector tant que l'on ne trouve pas de personnage valide?
+                const collector = message.channel.createMessageCollector(filter, {time: 60000});
 
-        collector.on('collect', m => {
-            let ret = false;
-            fighters.forEach(fighter => {
-                if (fighter.aliases.toLowerCase().includes(m.content.toLowerCase())) {
-                    picks.push(fighter.name)
-                    ret = true;
-                }
-            });
-            if (ret) {
-                //if the user input is correct, pick the character
-                //get the correct character name first
-                
-                collector.stop();
-            } else {
-                message.channel.send("Il faut entrer un nom de personnage valide.")
-            }
-        });
-
-        collector.on('end', collected => {
-            //second player pick
-            message.channel.send(args[1] + ", entre ton combattant.")
-            const filter = m => m.author.id === playerTags[1] 
-            //boucler le collector tant que l'on ne trouve pas de personnage valide?
-            const collector = message.channel.createMessageCollector(filter, {time: 60000});
-
-            collector.on('collect', m => {
-                let ret = false;
-                fighters.forEach(fighter => {
-                    if (fighter.aliases.toLowerCase().includes(m.content.toLowerCase())) {
-                        picks.push(fighter.name)
-                        ret = true;
+                collector.on('collect', m => {
+                    let ret = false;
+                    fighters.forEach(fighter => {
+                        if (fighter.aliases.toLowerCase().includes(m.content.toLowerCase())) {
+                            picks.push(fighter.name)
+                            ret = true;
+                        }
+                    });
+                    if (ret) {
+                        //if the user input is correct, pick the character
+                        //get the correct character name first
+                        
+                        collector.stop();
+                    } else {
+                        message.channel.send("Il faut entrer un nom de personnage valide.")
                     }
                 });
-                if (ret) {
-                    //if the user input is correct, pick the character
-                    collector.stop();
-                } else {
-                    message.channel.send("Il faut entrer un nom de personnage valide.")
-                }
-            });
 
-            collector.on('end', collected => {
-                //pick stage (reaction)
-                PlayerToPick = Math.floor(Math.random()); // either 0 or 1
-                selectedStage = ''
-                message.channel.send(args[PlayerToPick] + ", sélectionne un stage.").then(msg => {
+                collector.on('end', collected => {
+                    //second player pick
+                    message.channel.send(args[1] + ", entre ton combattant.")
+                    const filter = m => m.author.id === playerTags[1] 
+                    //boucler le collector tant que l'on ne trouve pas de personnage valide?
+                    const collector = message.channel.createMessageCollector(filter, {time: 60000});
 
-                    stages.forEach(stage => {
-                        msg.react(stage.id);
-                    });
-
-                    const filter = (reaction, user) => {
-                        return user.id === playerTags[PlayerToPick];
-                    };
-                    
-                    const collector = msg.createReactionCollector(filter, { time: 60000 });
-                    
-                    collector.on('collect', (reaction, user) => {
+                    collector.on('collect', m => {
                         let ret = false;
-                        stages.forEach(stage => {
-                            if (stage.emoji == reaction.emoji.name) {
-                                selectedStage = stage.name
+                        fighters.forEach(fighter => {
+                            if (fighter.aliases.toLowerCase().includes(m.content.toLowerCase())) {
+                                picks.push(fighter.name)
                                 ret = true;
                             }
                         });
                         if (ret) {
                             //if the user input is correct, pick the character
                             collector.stop();
+                        } else {
+                            message.channel.send("Il faut entrer un nom de personnage valide.")
                         }
                     });
-                    
+
                     collector.on('end', collected => {
-                        if (!selectedStage.length) {
-                            return message.channel.send("Vous n'avez pas sélectionné de stage. Le match est annulé.");
-                        }
-                        //insert the match data
-                        var sql = "insert into games(player_one_id,player_two_id,winner_id,P1_char,P2_char,stage) values('" +
-                        playerTags[0] + "','" +
-                        playerTags[1] + "'," +
-                        "NULL,'" +
-                        picks[0] + "','" +
-                        picks[1] + "'," +
-                        "'" + selectedStage + "');";
+                        //pick stage (reaction)
+                        PlayerToPick = Math.floor(Math.random()); // either 0 or 1
+                        selectedStage = ''
+                        message.channel.send(args[PlayerToPick] + ", sélectionne un stage.").then(msg => {
 
-                        db.query(sql, function(err, result) {
-                            if(err) throw err;
+                            stages.forEach(stage => {
+                                msg.react(stage.id);
+                            });
+
+                            const filter = (reaction, user) => {
+                                return user.id === playerTags[PlayerToPick];
+                            };
+                            
+                            const collector = msg.createReactionCollector(filter, { time: 60000 });
+                            
+                            collector.on('collect', (reaction, user) => {
+                                let ret = false;
+                                stages.forEach(stage => {
+                                    if (stage.emoji == reaction.emoji.name) {
+                                        selectedStage = stage.name
+                                        ret = true;
+                                    }
+                                });
+                                if (ret) {
+                                    //if the user input is correct, pick the character
+                                    collector.stop();
+                                }
+                            });
+                            
+                            collector.on('end', collected => {
+                                if (!selectedStage.length) {
+                                    return message.channel.send("Vous n'avez pas sélectionné de stage. Le match est annulé.");
+                                }
+                                //insert the match data
+                                var sql = "insert into games(player_one_id,player_two_id,winner_id,P1_char,P2_char,stage) values('" +
+                                playerTags[0] + "','" +
+                                playerTags[1] + "'," +
+                                "NULL,'" +
+                                picks[0] + "','" +
+                                picks[1] + "'," +
+                                "'" + selectedStage + "');";
+
+                                db.query(sql, function(err, result) {
+                                    if(err) throw err;
+                                });
+
+                                //await for a reaction to know the winner
+                                message.channel.send("Match en cours. Pour déclarer les résultats, utilisez la commande s!res");
+                            });
                         });
-
-                        //await for a reaction to know the winner
-                        message.channel.send("Match en cours. Pour déclarer les résultats, utilisez la commande s!res");
-                    });
+                    
+                    })
                 });
-            
-            })
-        });
 
+            });
+        })
+        
     },
 };

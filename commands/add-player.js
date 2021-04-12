@@ -25,27 +25,22 @@ module.exports = {
             }
             else {
 
-             var sql = "insert into users values('" +
-             message.author.id + "','" +
-             message.author.tag+"',"+
-             1000 + "," +
-             1000 + "," +
-             0 +","+
-             0 +","+
-             "NOW()," +
-             "NOW())";
+                var sql = "insert into users values('" +
+                message.author.id + "','" +
+                message.author.tag+"',"+
+                1000 + "," +
+                1000 + "," +
+                0 +","+
+                0 +","+
+                "NOW()," +
+                "NOW())";
 
-             db.query(sql, function(err, result) {
-                if(err) throw err;
-                else return message.channel.send("You've been registered to the bot! You can start a new match using the !match command");
-            });
-         }
+                db.query(sql, function(err, result) {
+                    if(err) throw err;
+                    else return message.channel.send("You've been registered to the bot! You can start a new match using the !match command");
+                });
+            }
 
-
-     });
-
-
-
-
+        });
     },
 };
